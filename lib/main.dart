@@ -10,6 +10,9 @@ void main() {
 }
 
 
+
+
+
 // StatelessWidget
 class HomeScreen extends StatelessWidget{
   @override
@@ -17,17 +20,22 @@ class HomeScreen extends StatelessWidget{
     return Scaffold(
       // backgroundColor: Colors.blue,
       backgroundColor: Color(0xFF335CB0),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Image.asset('asset/img/gom.png'),
-          ),
-          CircularProgressIndicator(
-            color: Colors.white,
-          ),
-        ],
-      ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: 30,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: Image.asset('asset/img/gom.png'),
+            ),
+            CircularProgressIndicator(
+              color: Colors.white,
+            ),
+          ],
+        ),
+      )
     );
   }
 }
