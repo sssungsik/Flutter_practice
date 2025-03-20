@@ -13,65 +13,107 @@ class Home extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              Text('Expanded',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  height: 0.01,
+                ),
+
+              ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
+                  Expanded(
+                    child: Container(
+                      color: Colors.lightBlue,
+                      height: 50,
+                      width: 50,
+                    ),
+                  ),
                   Container(
-                    color: Colors.redAccent,
+                    color: Colors.pinkAccent,
                     height: 50,
                     width: 50,
                   ),
                   Container(
-                    color: Colors.orangeAccent,
+                    color: Colors.amber,
                     height: 50,
                     width: 50,
                   ),
                   Container(
-                    color: Colors.yellowAccent,
-                    height: 50,
-                    width: 50,
-                  ),
-                  Container(
-                    color: Colors.greenAccent,
+                    color: Colors.green,
                     height: 50,
                     width: 50,
                   ),
                 ],
               ),
-              Container(
-                height: 50,
-                width: 50,
-                color: Colors.orangeAccent,
+              Text('Flexible, fit: FlexFit.loose',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  height: 0.01,
+                ),
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  Flexible(
+                    fit: FlexFit.loose,
+                    child: Container(
+                      color: Colors.blueAccent,
+                      height: 50,
+                      width: 50,
+                    ),
+                  ),
                   Container(
-                    color: Colors.redAccent,
+                    color: Colors.pinkAccent,
                     height: 50,
                     width: 50,
                   ),
                   Container(
-                    color: Colors.orangeAccent,
+                    color: Colors.amber,
                     height: 50,
                     width: 50,
                   ),
                   Container(
-                    color: Colors.yellowAccent,
-                    height: 50,
-                    width: 50,
-                  ),
-                  Container(
-                    color: Colors.greenAccent,
+                    color: Colors.green,
                     height: 50,
                     width: 50,
                   ),
                 ],
               ),
-              Container(
-                height: 50,
-                width: 50,
-                color: Colors.greenAccent,
+              Text('Flexible, fit: FlexFit.tight',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  height: 0.01,
+                ),
+              ),
+              Row(
+                children: [
+                  Flexible(
+                    fit: FlexFit.tight,
+                    child: Container(
+                      color: Colors.blueAccent,
+                      height: 50,
+                      width: 50,
+                    ),
+                  ),
+                  Container(
+                    color: Colors.pinkAccent,
+                    height: 50,
+                    width: 50,
+                  ),
+                  Container(
+                    color: Colors.amber,
+                    height: 50,
+                    width: 50,
+                  ),
+                  Container(
+                    color: Colors.green,
+                    height: 50,
+                    width: 50,
+                  ),
+                ],
               ),
             ],
           ),
