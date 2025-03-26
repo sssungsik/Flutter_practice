@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_practice/const/colors.dart';
 
 class Home extends StatelessWidget {
