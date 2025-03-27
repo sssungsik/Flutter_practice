@@ -10,7 +10,7 @@ void main() {
   // 플러터 실행
   runApp(
     MaterialApp(
-      home: Home(),
+      home: PaddingEx(),
     )
   );
 }
