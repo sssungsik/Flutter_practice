@@ -23,14 +23,14 @@ class _ImageTestState extends State<ImageTest> {
           int cnt = controller.page!.toInt();
           int nxt = cnt + 1;
 
-          if(nxt >= 4 ) {
+          if(nxt >= 3 ) {
             nxt = 0;
           }
 
           controller.animateToPage(
               nxt,
               duration: Duration(milliseconds: 500),
-              curve: Curves.bounceIn
+              curve: Curves.easeInOut
           );
         },
     );
@@ -64,10 +64,6 @@ class _ImageTestState extends State<ImageTest> {
           Image.asset(
             fit: BoxFit.cover,
             'asset/img/lang.png',
-          ),
-          Image.asset(
-            fit: BoxFit.cover,
-            'asset/img/gom.png',
           ),
         ],
       ),
