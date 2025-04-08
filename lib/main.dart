@@ -13,6 +13,21 @@ void main() {
   // 플러터 실행
   runApp(
     MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'sunflower',
+        textTheme: TextTheme(
+          displayLarge: TextStyle(
+            color: Colors.white,
+            fontSize: 77,
+            fontFamily: 'pari',
+          ),
+          displayMedium: TextStyle(
+            color: Colors.white,
+            fontSize: 50,
+            fontWeight: FontWeight.w600,
+          )
+        )
+      ),
       home: Dday(),
     )
   );
