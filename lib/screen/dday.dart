@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Dday extends StatelessWidget {
@@ -40,13 +41,35 @@ class _Head extends StatelessWidget {
             IconButton(
                 iconSize: 50,
                 color: Colors.black,
-                onPressed: (){},
+                onPressed: (){
+                  showCupertinoDialog(
+                    context: context,
+                    barrierDismissible: true,
+                    builder: (BuildContext context){
+                      return Align(
+                        alignment: Alignment.center,
+                        child: Container(
+                          color: Colors.white,
+                          height: 200,
+                          child: CupertinoDatePicker(
+                            mode: CupertinoDatePickerMode.monthYear,
+                            onDateTimeChanged: (DateTime date) {
+                              print(date);
+                            },
+                            dateOrder: DatePickerDateOrder.ymd,
+                          ),
+                        ),
+                      );
+                    }
+                  );
+                },
                 icon: Icon(
                   Icons.favorite,
                 )
             ),
             Text('D-10',
               style: textTheme.displayMedium,
+
              ),
           ],
         ),
