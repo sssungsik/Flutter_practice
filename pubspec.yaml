@@ -60,6 +60,21 @@ flutter:
 
   assets:
     - asset/img/
+    - asset/dday/
+    - asset/dday/img/
+
+  fonts:
+    - family: pari
+      fonts:
+        - asset: asset/dday/font/Parisienne-Regular.ttf
+
+    - family: sunflower
+      fonts:
+        - asset: asset/dday/font/Sunflower-Light.ttf
+        - asset: asset/dday/font/Sunflower-Medium.ttf
+          weight: 500
+        - asset: asset/dday/font/Sunflower-Bold.ttf
+          weight: 700
 
   # To add assets to your application, add an assets section, like this:
   # assets:
