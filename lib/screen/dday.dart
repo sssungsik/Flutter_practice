@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/const/colors.dart';
 
 class Dday extends StatelessWidget {
   const Dday({super.key});
@@ -24,11 +25,19 @@ class Dday extends StatelessWidget {
   }
 }
 
-class _Head extends StatelessWidget {
+class _Head extends StatefulWidget {
   const _Head({super.key});
 
   @override
+  State<_Head> createState() => _HeadState();
+}
+
+class _HeadState extends State<_Head> {
+  DateTime date = DateTime.now();
+
+  @override
   Widget build(BuildContext context) {
+    final now = DateTime.now();
     var textTheme = Theme.of(context).textTheme;
 
     return Expanded(
@@ -41,33 +50,16 @@ class _Head extends StatelessWidget {
             IconButton(
                 iconSize: 50,
                 color: Colors.black,
-                onPressed: (){
-                  showCupertinoDialog(
-                    context: context,
-                    barrierDismissible: true,
-                    builder: (BuildContext context){
-                      return Align(
-                        alignment: Alignment.center,
-                        child: Container(
-                          color: Colors.white,
-                          height: 200,
-                          child: CupertinoDatePicker(
-                            mode: CupertinoDatePickerMode.monthYear,
-                            onDateTimeChanged: (DateTime date) {
-                              print(date);
-                            },
-                            dateOrder: DatePickerDateOrder.ymd,
-                          ),
-                        ),
-                      );
-                    }
-                  );
-                },
+                onPressed: onHeartClick,
                 icon: Icon(
                   Icons.favorite,
                 )
             ),
-            Text('D-10',
+            Text(
+              '${date.year}.${date.month}.${date.day}',
+              style: textTheme.displaySmall,
+            ),
+            Text('D-${date.difference(now).inDays + 1}',
               style: textTheme.displayMedium,
 
              ),
@@ -75,6 +67,34 @@ class _Head extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  onHeartClick(){
+    showCupertinoDialog(
+          context: context,
+          barrierDismissible: true,
+          builder: (BuildContext context){
+            return Align(
+              alignment: Alignment.center,
+              child: Container(
+                color: Colors.white,
+                height: 200,
+                child: CupertinoDatePicker(
+                  initialDateTime: date,
+                  minimumDate: date,
+                  mode: CupertinoDatePickerMode.date,
+                  onDateTimeChanged: (DateTime datetime) {
+                    setState(() {
+                      date = datetime;
+                    });
+                  },
+                  dateOrder: DatePickerDateOrder.ymd,
+                ),
+              ),
+            );
+          }
+      );
+
   }
 }
 
@@ -86,7 +106,8 @@ class _Footer extends StatelessWidget {
     return  Expanded(
       child: Container(
         child: Image.asset(
-            'asset/dday/img/middle_image.png'
+            'asset/dday/img/weding.png',
+          fit: BoxFit.fitHeight
         ),
       ),
     );

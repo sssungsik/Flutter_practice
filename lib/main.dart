@@ -25,7 +25,12 @@ void main() {
             color: Colors.white,
             fontSize: 50,
             fontWeight: FontWeight.w600,
-          )
+          ),
+            displaySmall: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontWeight: FontWeight.w600,
+            )
         )
       ),
       home: Dday(),
