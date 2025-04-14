@@ -5,6 +5,8 @@ import 'package:flutter_practice/screen/statefulWidget_lifeCycle.dart';
 import 'package:flutter_practice/screen/image_test.dart';
 import 'package:flutter_practice/screen/18_Alignment.dart';
 import 'package:flutter_practice/screen/dday.dart';
+import 'package:flutter_practice/screen/19_NumberGenerator.dart';
+
 
 void main() {
 
@@ -34,7 +36,7 @@ void main() {
             )
         )
       ),
-      home: Aligns(),
+      home: NumberGene(),
     )
   );
 }

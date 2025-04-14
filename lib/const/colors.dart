@@ -6,3 +6,7 @@ const colors = [
   Colors.amber,
   Colors.green,
 ];
+
+const Color colorBL = Colors.black;
+const Color colorRD = Colors.redAccent;
+const Color colorYL = Colors.amber;

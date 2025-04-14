@@ -62,6 +62,7 @@ flutter:
     - asset/img/
     - asset/dday/
     - asset/dday/img/
+    - asset/numbergene/img/
 
   fonts:
     - family: pari
