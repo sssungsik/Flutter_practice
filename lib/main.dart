@@ -14,6 +14,8 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   // 플러터 실행
+
+
   runApp(
     MaterialApp(
       theme: ThemeData(
