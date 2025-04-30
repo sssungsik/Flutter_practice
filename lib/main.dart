@@ -9,8 +9,6 @@ import 'package:flutter_practice/screen/19_NumberGenerator.dart';
 
 
 void main() {
-
-
   WidgetsFlutterBinding.ensureInitialized();
   // 플러터 실행
   runApp(
