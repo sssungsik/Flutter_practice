@@ -36,19 +36,15 @@ class _Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var textTheme = Theme.of(context).textTheme;
     return /// 제목, 아이콘
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            '랜덤숫자생성기',
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-                fontWeight: FontWeight.w800
-            ),
-
-          ),
+            '테스트',
+            style: textTheme.displayLarge,
+              ),
           IconButton(
               color: colorYL,
               onPressed: (){},
@@ -69,17 +65,17 @@ class _Body extends StatelessWidget {
     return  /// 숫자
       Expanded(
         child: Column(
-          mainAxisAligynment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             [1,2,3],
             [4,5,6],
             [7,8,9],
           ].map((e) => Row(
-            children: e.map((ee) => Text(
-                ee.toString(),
-                style: TextStyle(
-                  color: Colors.white
-                ),)
+            children: e.map((ee) => Image.asset(
+               'asset/numbergene/img/$ee.png',
+              width: 50,
+              height: 70,
+            ),
             ).toList(),
           )).toList(),
         ),

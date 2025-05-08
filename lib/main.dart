@@ -16,12 +16,13 @@ void main() {
   runApp(
     MaterialApp(
       theme: ThemeData(
-        fontFamily: 'sunflower',
+        fontFamily: 'pretend',
         textTheme: TextTheme(
           displayLarge: TextStyle(
             color: Colors.white,
             fontSize: 77,
             fontFamily: 'pari',
+            fontWeight: FontWeight.w600,
           ),
           displayMedium: TextStyle(
             color: Colors.white,
