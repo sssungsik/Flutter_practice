@@ -69,7 +69,7 @@ class _Body extends StatelessWidget {
     return  /// 숫자
       Expanded(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAligynment: MainAxisAlignment.center,
           children: [
             [1,2,3],
             [4,5,6],
