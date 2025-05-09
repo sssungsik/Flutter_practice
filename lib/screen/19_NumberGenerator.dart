@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/const/colors.dart';
 
-class NumberGene extends StatelessWidget {
+class NumberGene extends StatefulWidget {
   const NumberGene({super.key});
 
+  @override
+  State<NumberGene> createState() => _NumberGeneState();
+}
+
+class _NumberGeneState extends State<NumberGene> {
+  List<int> numbers = [123,456,789,];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +23,9 @@ class NumberGene extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               _Header(),
-              _Body(),
+              _Body(
+                numbers: numbers,
+              ),
               _Footer()
 
             ],
@@ -58,7 +66,10 @@ class _Header extends StatelessWidget {
 
 
 class _Body extends StatelessWidget {
-  const _Body({super.key});
+  List<int> numbers;
+  const _Body({
+    required this.numbers,
+    super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -66,11 +77,9 @@ class _Body extends StatelessWidget {
       Expanded(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            [1,2,3],
-            [4,5,6],
-            [7,8,9],
-          ].map((e) => Row(
+          children: numbers
+              .map((a)=>a.toString().split(''))
+              .map((e) => Row(
             children: e.map((ee) => Image.asset(
                'asset/numbergene/img/$ee.png',
               width: 50,
