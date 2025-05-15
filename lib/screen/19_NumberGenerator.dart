@@ -27,7 +27,6 @@ class _NumberGeneState extends State<NumberGene> {
                 numbers: numbers,
               ),
               _Footer()
-
             ],
           ),
         ),
